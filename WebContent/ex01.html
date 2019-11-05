@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--  <script type="text/javascript" src="./jquery/jquery-3.4.1.js"></script> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"/>
+<script>
+// vanila js
+window.addEventListener("load", function(){
+	console.log("loaded1");
+});
+
+// jQuery 1
+jQuery(document).ready(function(){
+	console.log("loaded2");
+});
+
+
+//jQuery 2
+$(document).ready(function(){
+	console.log("loaded3");
+});
+
+
+//jQuery 3 - 추천
+$(function(){
+	console.log("loaded4");
+});
+
+
+</script>
+</head>
+<body>
+	<h1>jQuery 로딩</h1>
+</body>
+</html>
+ 

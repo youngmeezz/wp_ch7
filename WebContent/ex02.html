@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script>
+$(function(){
+	var $obj = $("li");
+	
+	// 길이가 있다.
+	console.log($obj.length);
+	
+	// 하지만, Array는 아니다. 유사배열
+	console.log(typeof($obj) + ":" + ($obj instanceof Array))
+	
+	// jQuery Object안의 element들은 jQuery Object가 아니다.
+	// jQuery API를 호출 안 됨 ex) $obj[0].css(...) x
+	console.log($obj[0]);      
+	
+    // get(index)를 사용해서 반환받는 타입도 HTMLElement다.
+	console.log($obj.get(0));					  
+	
+    // event handler
+    $obj.click(function(){
+    	console.log(this);
+    	$(this).css('color', '#f00');
+    })
+						  
+	/*
+	_jQeury.prototype.text = function(text){
+		Array.prototype.forEach(this, function(el){
+			el.innerText = text;
+		});
+	}
+	_jQeury.prototype.click = function(fn){
+	Array.prototype.forEach(this, function(el){
+		el.addEventListener('click', fn);
+	});
+}
+    
+    */
+});
+</script>
+</head>
+<body>
+	<h1>jQuery Object</h1>
+	<ul>
+		<li>Javascript</li>
+		<li>jQuery</li>
+		<li>ES6</li>
+		<li>React.js</li>
+		<li>Node.js</li>
+	</ul>
+</body>
+</html> 

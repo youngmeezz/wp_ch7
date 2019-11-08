@@ -5,18 +5,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<title>sample1</title>
+		<title>sample2</title>
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+				$("#first").css("color","red");
+				$("#second").css("color","#00f");
+				$("#third").css("color","#0f0");
+				$("#fourth").css("color","#f00");
+s			})
+		});
 		</script>
 	</head>
 	<body>
-	<ul>
-		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-	</ul>
+	
+		<ul>
+			<li id="first"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+			<li id="second"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+			<li id="third"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+			<li id="fourth"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		</ul>
 
 	</body>
 </html>

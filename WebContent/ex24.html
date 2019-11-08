@@ -6,10 +6,15 @@
 <script type="text/javascript">
 	$( function() {
 		/* 코드를 완성하세요 */
-	} );  
+		setTimeout(function(){
+			var html = "<h1>타이틀 입니다.</h1>";
+			$("#p1").before(html);
+		}, 1000);
+	});  
 </script>
 </head>
 <body>
+
 <p id="p1">내용입니다.</p>
 </body>
 </html>

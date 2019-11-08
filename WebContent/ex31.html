@@ -6,8 +6,17 @@
 <script type="text/javascript">
 	$( function() {
 		/* 코드를 완성하세요 */
-
+		console.log($("strong").parent());
 		
+		setTimeout(function(){
+			$("strong, p")
+				.wrapAll("<div>")
+				.parent()
+				.css({
+					border: "1px solid #cccs",
+					width: "200px"
+				})
+		}, 2000);
 	} );  
 </script>
 </head>

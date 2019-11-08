@@ -5,22 +5,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<title>sample6</title>
+		<title>sample7</title>
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
-		
 		$(function(){
-			$("#first, #third").css("color","red");
+			$("li > strong").css("color","red");
+			$("li > div > strong").css("color","blue");
 		});
-		
 		</script>
 	</head>
 	<body>
 		<ul>
-			<li id="first"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li id="second"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li id="third"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li id="fourth"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+			<li><strong> 텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+			<li>
+				<div>
+					<strong> 텍스트 </strong>
+					텍스트 텍스트 텍스트 텍스트
+					<span> 텍스트 </span>
+				</div>
+			</li>
+			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 		</ul>
 	</body>
 </html>
